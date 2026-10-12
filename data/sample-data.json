@@ -1,0 +1,133 @@
+{
+  "airQuality": [
+    {
+      "station_id": "KYIV_001",
+      "city": "Київ",
+      "latitude": 50.4501,
+      "longitude": 30.5234,
+      "measured_at": "2026-10-01T08:00:00Z",
+      "pm25": 12.4,
+      "pm10": 21,
+      "no2": 18.3,
+      "temperature": 11.2,
+      "humidity": 72,
+      "source": "SaveEcoBot"
+    },
+    {
+      "station_id": "KYIV_001",
+      "city": "Київ",
+      "latitude": 50.4501,
+      "longitude": 30.5234,
+      "measured_at": "2026-10-01T14:00:00Z",
+      "pm25": 27.9,
+      "pm10": 41.5,
+      "no2": 32.1,
+      "temperature": 15.8,
+      "humidity": 58,
+      "source": "SaveEcoBot"
+    },
+    {
+      "station_id": "KYIV_002",
+      "city": "Київ",
+      "latitude": 50.4162,
+      "longitude": 30.6293,
+      "measured_at": "2026-10-01T14:00:00Z",
+      "pm25": 35.6,
+      "pm10": 52,
+      "no2": 40.7,
+      "so2": 6.1,
+      "temperature": 15.1,
+      "humidity": 60,
+      "source": "OpenAQ"
+    },
+    {
+      "station_id": "LVIV_001",
+      "city": "Львів",
+      "latitude": 49.8397,
+      "longitude": 24.0297,
+      "measured_at": "2026-10-01T14:00:00Z",
+      "pm25": 9.8,
+      "pm10": 17.2,
+      "temperature": 13.4,
+      "humidity": 66,
+      "source": "EcoCity"
+    },
+    {
+      "station_id": "DNIPRO_001",
+      "city": "Дніпро",
+      "latitude": 48.4647,
+      "longitude": 35.0462,
+      "measured_at": "2026-10-02T09:00:00Z",
+      "pm25": 44.1,
+      "pm10": 70.3,
+      "no2": 51,
+      "so2": 12.4,
+      "co": 0.9,
+      "temperature": 14,
+      "humidity": 55,
+      "source": "SaveEcoBot"
+    }
+  ],
+  "waterQuality": [
+    {
+      "station_id": "DNIPRO_KYIV_01",
+      "water_body": "Дніпро",
+      "city": "Київ",
+      "latitude": 50.4547,
+      "longitude": 30.5946,
+      "measured_at": "2026-09-30T10:00:00Z",
+      "ph": 7.8,
+      "dissolved_oxygen": 8.4,
+      "turbidity": 4.1,
+      "nitrates": 2.3,
+      "phosphates": 0.12,
+      "temperature": 16.5,
+      "source": "Держводагентство"
+    },
+    {
+      "station_id": "DNIPRO_KYIV_02",
+      "water_body": "Дніпро",
+      "city": "Київ",
+      "latitude": 50.3912,
+      "longitude": 30.611,
+      "measured_at": "2026-09-30T10:30:00Z",
+      "ph": 8.1,
+      "dissolved_oxygen": 7.2,
+      "turbidity": 6.8,
+      "nitrates": 3.9,
+      "phosphates": 0.21,
+      "temperature": 16.9,
+      "source": "Водоканал"
+    },
+    {
+      "station_id": "DESNA_01",
+      "water_body": "Десна",
+      "city": "Київ",
+      "latitude": 50.531,
+      "longitude": 30.644,
+      "measured_at": "2026-09-29T09:00:00Z",
+      "ph": 7.5,
+      "dissolved_oxygen": 9.1,
+      "turbidity": 3,
+      "nitrates": 1.7,
+      "phosphates": 0.08,
+      "temperature": 15.2,
+      "source": "data.gov.ua"
+    },
+    {
+      "station_id": "POLTVA_01",
+      "water_body": "Полтва",
+      "city": "Львів",
+      "latitude": 49.855,
+      "longitude": 24.042,
+      "measured_at": "2026-09-28T11:00:00Z",
+      "ph": 7.1,
+      "dissolved_oxygen": 4.3,
+      "turbidity": 15.4,
+      "nitrates": 9.6,
+      "phosphates": 0.85,
+      "temperature": 14.1,
+      "source": "manual"
+    }
+  ]
+}

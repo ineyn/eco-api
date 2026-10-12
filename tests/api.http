@@ -1,0 +1,124 @@
+@baseUrl = http://localhost:3000/api/v1
+
+###
+GET {{baseUrl}}
+
+### Air quality: get all
+GET {{baseUrl}}/air-quality
+
+### Air quality: filter
+GET {{baseUrl}}/air-quality?city=Київ&limit=2
+
+### Air quality: create
+# @name createAir
+POST {{baseUrl}}/air-quality
+Content-Type: application/json
+
+{
+  "station_id": "ODESA_001",
+  "city": "Одеса",
+  "latitude": 46.4825,
+  "longitude": 30.7233,
+  "pm25": 18.2,
+  "pm10": 27.5,
+  "no2": 21.0,
+  "temperature": 17.3,
+  "humidity": 70,
+  "source": "SaveEcoBot"
+}
+
+### Air quality: get by id
+GET {{baseUrl}}/air-quality/{{createAir.response.body.data._id}}
+
+### Air quality: patch
+PATCH {{baseUrl}}/air-quality/{{createAir.response.body.data._id}}
+Content-Type: application/json
+
+{
+  "pm25": 24.7
+}
+
+### Air quality: put
+PUT {{baseUrl}}/air-quality/{{createAir.response.body.data._id}}
+Content-Type: application/json
+
+{
+  "station_id": "ODESA_001",
+  "city": "Одеса",
+  "pm25": 15.0
+}
+
+### Air quality: delete
+DELETE {{baseUrl}}/air-quality/{{createAir.response.body.data._id}}
+
+### Air quality: get deleted (404)
+GET {{baseUrl}}/air-quality/{{createAir.response.body.data._id}}
+
+### Air quality: validation error (400)
+POST {{baseUrl}}/air-quality
+Content-Type: application/json
+
+{
+  "city": "Одеса",
+  "pm25": -3
+}
+
+### Air quality: invalid id (400)
+GET {{baseUrl}}/air-quality/123
+
+### Water quality: get all
+GET {{baseUrl}}/water-quality
+
+### Water quality: filter
+GET {{baseUrl}}/water-quality?water_body=Дніпро
+
+### Water quality: create
+# @name createWater
+POST {{baseUrl}}/water-quality
+Content-Type: application/json
+
+{
+  "station_id": "DNIPRO_KYIV_03",
+  "water_body": "Дніпро",
+  "city": "Київ",
+  "ph": 7.9,
+  "dissolved_oxygen": 8.0,
+  "turbidity": 5.2,
+  "nitrates": 2.8,
+  "temperature": 16.0,
+  "source": "Водоканал"
+}
+
+### Water quality: get by id
+GET {{baseUrl}}/water-quality/{{createWater.response.body.data._id}}
+
+### Water quality: patch
+PATCH {{baseUrl}}/water-quality/{{createWater.response.body.data._id}}
+Content-Type: application/json
+
+{
+  "ph": 8.3
+}
+
+### Water quality: put
+PUT {{baseUrl}}/water-quality/{{createWater.response.body.data._id}}
+Content-Type: application/json
+
+{
+  "station_id": "DNIPRO_KYIV_03",
+  "water_body": "Дніпро",
+  "ph": 7.4
+}
+
+### Water quality: delete
+DELETE {{baseUrl}}/water-quality/{{createWater.response.body.data._id}}
+
+### Water quality: validation error (400)
+POST {{baseUrl}}/water-quality
+Content-Type: application/json
+
+{
+  "station_id": "X",
+  "water_body": "Дніпро",
+  "ph": 15
+}
