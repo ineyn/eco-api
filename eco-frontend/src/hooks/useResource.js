@@ -12,7 +12,7 @@ export default function useResource(api, { initialLimit = 10 } = {}) {
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [loadedAt, setLoadedAt] = useState(null); // час останнього успішного завантаження
+  const [loadedAt, setLoadedAt] = useState(null); 
   const controllerRef = useRef(null); // AbortController поточного запиту
 
   const load = useCallback(async () => {
@@ -33,7 +33,7 @@ export default function useResource(api, { initialLimit = 10 } = {}) {
       setMeta(res.meta);
       setLoadedAt(new Date());
     } catch (err) {
-      if (isCancel(err)) return; // запит скасовано навмисно, це не помилка
+      if (isCancel(err)) return; // запит скасовано навмисно
       setError(getErrorMessage(err));
       setRows([]);
     } finally {
